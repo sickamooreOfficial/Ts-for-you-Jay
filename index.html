@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Jay's Surprise</title>
+
+<style>
+  body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+  }
+
+  button {
+    margin-top: 100px;
+    padding: 15px 25px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  #message {
+    display: none;
+    font-size: 60px;
+    font-weight: bold;
+    color: red;
+    margin-top: 30px;
+    animation: flash 0.6s infinite;
+  }
+
+  @keyframes flash {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+</style>
+</head>
+
+<body>
+
+<button onclick="reveal()">Jay, this button is for you 😜</button>
+
+<div id="message">I DID THIS TO YOUR MUM LAST NIGHT 😈</div>
+
+<div id="gif" style="display:none; margin-top:20px;">
+  <div class="tenor-gif-embed"
+       data-postid="19938252"
+       data-share-method="host"
+       data-aspect-ratio="1.78771"
+       data-width="60%">
+    <a href="https://tenor.com/view/rec-room-gif-19938252">Rec Room GIF</a>
+  </div>
+</div>
+
+<!-- 🔊 YOUR AUDIO FILE GOES HERE -->
+<audio id="sound">
+  <source src="sound.mp3" type="audio/mpeg">
+</audio>
+
+<script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
+<script>
+function reveal() {
+  document.getElementById("message").style.display = "block";
+  document.getElementById("gif").style.display = "block";
+
+  var audio = document.getElementById("sound");
+  audio.play();
+}
+</script>
+
+</body>
+</html>
